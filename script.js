@@ -97,6 +97,7 @@ const dom = {
   apiKeyForm: document.getElementById('api-key-form'),
   apiKeyInput: document.getElementById('api-key-input'),
   apiKeyError: document.getElementById('api-key-error'),
+  apiStatusIndicator: document.getElementById('api-status-indicator'),
   sourceLangSelect: document.getElementById('source-lang'),
   targetLangSelect: document.getElementById('target-lang'),
   swapLanguagesBtn: document.getElementById('swap-languages-btn'),
@@ -133,6 +134,7 @@ function render() {
   // Views
   dom.apiKeyView.classList.toggle('hidden', state.apiKeySet);
   dom.appView.classList.toggle('hidden', !state.apiKeySet);
+  dom.apiStatusIndicator.classList.toggle('hidden', !state.apiKeySet);
 
   // Language selectors
   dom.sourceLangSelect.value = state.sourceLang;
